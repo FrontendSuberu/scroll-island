@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     trigger: "[data-scroll-container]",
     start: "top top",
     end: "bottom bottom",
-    // markers: true,
+    markers: true,
     animation: tl,
-    scrub: 1,
+    scrub: 2,
   });
 
   openScrollIsland();

@@ -28,7 +28,7 @@ body {
   padding-inline: 14px;
   max-width: 720px;
   margin: 0 auto;
-  /* padding-top: 40vh; */
+  padding-top: 40vh;
 }
 
 .scroll-wrapper {
@@ -38,7 +38,11 @@ body {
 }
 
 .scroll-island-container {
-  position: sticky;
+  /* position: sticky; */
+  position: fixed;
+  left: 0;
+  padding-inline: 3vw;
+  width: 100%;
   bottom: 20px;
   display: flex;
   justify-content: center;
@@ -257,13 +261,14 @@ body {
     1,
     1
   );
-  transition: all 1s var(--elastic-in);
+  transition: all .7s var(--elastic-in);
 }
 
 .scroll-island-wrapper {
   width: 280px;
   height: 44px;
   bottom: -4px;
+  overflow: hidden;
   cursor: pointer;
   padding: 0.6em 0.7em;
   background-color: black;
@@ -299,8 +304,21 @@ body {
   justify-content: space-between;
 }
 
+/* when open */
 [data-scroll-island="open"] {
-  height: 200px;
+  height: 280px;
   width: 340px;
   padding: 1.2em 1em;
+}
+
+
+.island-nav{
+  padding-top: 5em;
+}
+
+.island-nav-text{
+  padding-block: .5em;
+  color: wheat;
+  font-size: 11.5px;
+  font-family: 'Geist Mono', monospace;
 }
