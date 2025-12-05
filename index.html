@@ -4,49 +4,93 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
     <title>scroll-island made w GSAP</title>
   </head>
   <body>
-    <p>
-      Micro-interactions and animation play one of the most underrated yet
-      powerful roles in creative work. They’re the invisible language that tells
-      users: this was crafted by someone who pays attention. Anyone can place
-      elements on a screen, but only a few understand how those elements should
-      behave, breathe, and respond. That small hover shift, the way text enters
-      with purpose, the timing of a scroll reveal — those details carry emotion.
-      They’re the difference between a design that looks static and one that
-      feels intentional, modern, and alive.
-    </p>
+    <div class="scroll-wrapper">
+      <p class="geist-mono-text">
+        When people think about creative work, they usually focus on the big
+        things — the layout, the colors, the typography. But what most beginners
+        overlook is that micro-interactions and animation carry just as much
+        weight, and sometimes even more. They’re the subtle signals that guide
+        users, create emotional connection, and bring a sense of life into a
+        design. A simple hover shift, a smooth fade, the timing of a reveal —
+        these details tell the user how to feel and how to move through the
+        experience.
+      </p>
 
-    <p>
-      When you look at the creators you admire, what stands out isn’t just their
-      layouts or their color choices. It’s the way every movement feels
-      thought-through. Their micro-interactions create personality. Their
-      animations communicate confidence. Those small touches make their work
-      feel finished, and that’s why people remember them. You can literally feel
-      their thinking in the transitions — the patience, the taste, the
-      restraint, the playfulness. It’s why their work hits you so deeply: it
-      shows you what’s possible when someone refuses to cut corners.
-    </p>
+      <p class="geist-mono-text">
+        What I always try to explain is that micro-interactions aren’t
+        decoration. They’re communication. They help users understand what’s
+        interactive, what’s important, and what’s happening behind the scenes.
+        When done well, they make the interface feel intuitive without the user
+        even realizing why. When done poorly, the entire experience feels rigid
+        and uninviting, no matter how good the visual design is.
+      </p>
 
-    <p>
-      For you, micro-interactions aren’t just a design technique — they’re a way
-      to express your identity. They let you turn your ideas into experiences
-      that reflect how you see the world: precise, expressive, emotional. Even
-      when you’re unsure or overwhelmed, animation is one of those domains where
-      your instinct shows. You know when a movement feels right. You know when
-      an easing curve feels cheap or when it feels world-class. That intuition
-      is one of your strengths, and leaning into it separates your work from the
-      noise.
-    </p>
+      <p class="geist-mono-text">
+        This is also one of the big things that influences my own creative
+        direction. The people I admire aren’t just good at layouts — they use
+        movement with intention. Their transitions feel confident, their
+        interactions feel thoughtful, and their animations carry emotion.
+        Watching their work taught me that animation is more than motion; it’s
+        storytelling. It’s taste. It’s decision-making. And those choices are
+        what separate forgettable work from experiences that actually stay with
+        you.
+      </p>
 
-    <p>
-      Micro-interactions also teach discipline. They force you to slow down and
-      think: What story am I telling with this movement? What emotion should
-      this interaction leave behind? How can I make this moment feel meaningful?
-      That level of care builds your taste and shapes your creative identity
-      over time.
-    </p>
+      <p class="geist-mono-text">
+        For me, studying micro-interactions has forced me to raise my standards.
+        It pushes me to think about the feel of a project, not just the look.
+        It’s shaping me into someone who doesn’t just design screens but builds
+        experiences — someone who wants every moment, even the smallest ones, to
+        reflect clarity, control, and personality.
+      </p>
+    </div>
+
+    <div class="scroll-island-wrapper">
+      <div class="scroll-nav-info">
+        <p class="geist-heading island-heading">Homepage</p>
+
+        <div class="scroll-progress">
+          <svg
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              class="stroke-d-bg/20"
+              stroke-width="4"
+              fill="none"
+            ></circle>
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              class="stroke-d-bg/80"
+              stroke-width="4"
+              fill="none"
+              stroke-dasharray="62.33185307179586"
+              stroke-dashoffset="62.33185307179586"
+              stroke-linecap="round"
+              transform="rotate(-90 12 12)"
+            ></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

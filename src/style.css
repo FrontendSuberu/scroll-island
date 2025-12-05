@@ -1,96 +1,75 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-a {
+.geist-mono-text {
+  font-size: clamp(1em, 1vw + 0.3em, 1.2em);
+  font-family: "Geist Mono", monospace;
+  font-optical-sizing: auto;
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+  padding-block: 30px;
+  font-style: normal;
 }
-a:hover {
-  color: #535bf2;
+
+.geist-heading {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-style: normal;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
+  width: 100%;
+  padding-inline: 14px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+.scroll-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-top: 40vh;
 }
 
-.card {
-  padding: 2em;
+.scroll-island-wrapper {
+  width: 280px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  bottom: -4px;
+  padding: 0.6em 1em;
+  background-color: black;
+  border-radius: 40px;
 }
 
-.read-the-docs {
-  color: #888;
+.island-heading {
+  font-size: 14px;
+  /* padding-left: 12px; */
+  color: white;
+  width: max-content;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.stroke-d-bg\/20 {
+  stroke: #d3d3d32f;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.stroke-d-bg\/80 {
+  stroke: white;
+}
+
+.scroll-progress{
+  width: 25px;
+  height: 25px;
+}
+
+.scroll-nav-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
