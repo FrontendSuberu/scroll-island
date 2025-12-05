@@ -14,7 +14,7 @@
     <title>scroll-island made w GSAP</title>
   </head>
   <body>
-    <div class="scroll-wrapper">
+    <div class="scroll-wrapper" data-scroll-container>
       <p class="geist-mono-text">
         When people think about creative work, they usually focus on the big
         things — the layout, the colors, the typography. But what most beginners
@@ -55,39 +55,42 @@
       </p>
     </div>
 
-    <div class="scroll-island-wrapper">
-      <div class="scroll-nav-info">
-        <p class="geist-heading island-heading">Homepage</p>
+    <div class="scroll-island-container">
+      <div class="scroll-island-wrapper" data-scroll-island="closed">
+        <div class="scroll-nav-info">
+          <p class="geist-heading island-heading">Homepage</p>
 
-        <div class="scroll-progress">
-          <svg
-            width="25"
-            height="25"
-            viewBox="0 0 25 25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="12"
-              cy="12"
-              r="10"
-              class="stroke-d-bg/20"
-              stroke-width="4"
+          <div class="scroll-progress">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
               fill="none"
-            ></circle>
-            <circle
-              cx="12"
-              cy="12"
-              r="10"
-              class="stroke-d-bg/80"
-              stroke-width="4"
-              fill="none"
-              stroke-dasharray="62.33185307179586"
-              stroke-dashoffset="62.33185307179586"
-              stroke-linecap="round"
-              transform="rotate(-90 12 12)"
-            ></circle>
-          </svg>
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                class="stroke-d-bg/20"
+                stroke-width="3"
+                fill="none"
+              ></circle>
+              <circle
+                data-scroll-indicator
+                cx="12"
+                cy="12"
+                r="10"
+                class="stroke-d-bg/80"
+                stroke-width="3"
+                fill="none"
+                stroke-dasharray="62.33185307179586"
+                stroke-dashoffset="62.33185307179586"
+                stroke-linecap="round"
+                transform="rotate(-90 12 12)"
+              ></circle>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
