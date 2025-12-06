@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="scroll-wrapper" data-scroll-container>
-      <div>
+      <div data-content>
         <span class="geist-heading">INTRODUCTION</span>
         <p class="geist-mono-text">
           When people think about creative work, they usually focus on the big
@@ -29,7 +29,7 @@
         </p>
       </div>
 
-      <div>
+      <div data-content>
         <span class="geist-heading">WHY IT MATTERS</span>
         <p class="geist-mono-text">
           What I always try to explain is that micro-interactions aren’t
@@ -41,7 +41,7 @@
         </p>
       </div>
 
-      <div>
+      <div data-content>
         <span class="geist-heading">PERSONAL EXPERIENCE</span>
         <p class="geist-mono-text">
           This is also one of the big things that influences my own creative
@@ -55,7 +55,7 @@
         </p>
       </div>
 
-      <div>
+      <div data-content>
         <span class="geist-heading">CONCLUSION</span>
         <p class="geist-mono-text">
           For me, studying micro-interactions has forced me to raise my
@@ -65,7 +65,6 @@
           smallest ones, to reflect clarity, control, and personality.
         </p>
       </div>
-   
     </div>
 
     <div class="scroll-island-container">
@@ -109,10 +108,13 @@
         <div class="island-nav">
           <span>NAVIGATION</span>
 
-          <p class="island-nav-text">Introduction</p>
-          <p class="island-nav-text">Why it matters</p>
-          <p class="island-nav-text">Personal Experience</p>
-          <p class="island-nav-text">Conclusion</p>
+          <div class="nav-wrapper">
+            <p class="island-nav-text">Introduction</p>
+            <p class="island-nav-text">Why it matters</p>
+            <p class="island-nav-text">Personal Experience</p>
+            <p class="island-nav-text">Conclusion</p>
+            <div class="nav-indicator" data-island-indicator></div>
+          </div>
         </div>
       </div>
     </div>

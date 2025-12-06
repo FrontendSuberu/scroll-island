@@ -3,7 +3,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 const scrollIsland = document.querySelector('[data-scroll-island="closed"]');
 
-
 //open scroll island
 const openScrollIsland = () => {
   scrollIsland.addEventListener("click", (e) => {
@@ -22,8 +21,12 @@ const closeScrollIsland = () => {
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  const tl = gsap.timeline();
+  //toggle states for the island wrapper
+  openScrollIsland();
+  closeScrollIsland();
 
+  //progress logic
+  const tl = gsap.timeline();
   tl.to("[data-scroll-indicator]", {
     strokeDashoffset: "0%",
     duration: 1,
@@ -33,11 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
     trigger: "[data-scroll-container]",
     start: "top top",
     end: "bottom bottom",
-    markers: true,
+    // markers: true,
     animation: tl,
     scrub: 2,
+    onUpdate: (self) => {
+      const p = self.progress;
+      gsap.set("[data-island-indicator]", {
+        yPercent: `${300 * p}`,
+      });
+    },
   });
-
-  openScrollIsland();
-  closeScrollIsland();
 });
