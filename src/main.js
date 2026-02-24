@@ -3,27 +3,19 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 const scrollIsland = document.querySelector('[data-scroll-island="closed"]');
 
-//open scroll island
-const openScrollIsland = () => {
+document.addEventListener("DOMContentLoaded", () => {
+  //open scroll island
   scrollIsland.addEventListener("click", (e) => {
     e.stopPropagation(); //prevents event bubbling
     scrollIsland.setAttribute("data-scroll-island", "open");
   });
-};
 
-//open scroll island
-const closeScrollIsland = () => {
+  //open scroll island
   document.body.addEventListener("click", () => {
     scrollIsland.setAttribute("data-scroll-island", "closed");
   });
-};
 
-document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
-
-  //toggle states for the island wrapper
-  openScrollIsland();
-  closeScrollIsland();
 
   //progress logic
   const tl = gsap.timeline();
